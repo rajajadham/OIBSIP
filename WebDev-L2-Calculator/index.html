@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | Raja Jadham</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="calculator-container">
+
+        <div class="calculator">
+            <div class="brand">
+                <span>R</span>
+                <h1>RajaCalc</h1>
+            </div>
+
+            <div class="display">
+                <div id="previousDisplay"></div>
+                <div id="currentDisplay">0</div>
+            </div>
+
+            <div class="buttons">
+
+                <button class="action" data-action="clear">AC</button>
+                <button class="action" data-action="backspace">⌫</button>
+                <button class="operator" data-operator="%">%</button>
+                <button class="operator" data-operator="/">÷</button>
+
+                <button data-number="7">7</button>
+                <button data-number="8">8</button>
+                <button data-number="9">9</button>
+                <button class="operator" data-operator="*">×</button>
+
+                <button data-number="4">4</button>
+                <button data-number="5">5</button>
+                <button data-number="6">6</button>
+                <button class="operator" data-operator="-">−</button>
+
+                <button data-number="1">1</button>
+                <button data-number="2">2</button>
+                <button data-number="3">3</button>
+                <button class="operator" data-operator="+">+</button>
+
+                <button data-number="0" class="zero">0</button>
+                <button data-number=".">.</button>
+                <button class="equals" data-action="calculate">=</button>
+
+            </div>
+        </div>
+
+        <p class="footer">Oasis Infobyte • Level 2 Task 1 • Raja Jadham</p>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
