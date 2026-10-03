@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f4f1ea;
+    color: #202020;
+    line-height: 1.7;
+}
+
+.hero {
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background:
+        linear-gradient(
+            rgba(19, 25, 35, 0.82),
+            rgba(19, 25, 35, 0.9)
+        ),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.tagline,
+.section-label {
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #b88945;
+}
+
+.hero h1 {
+    margin: 18px 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 17px;
+    color: #e2e2e2;
+}
+
+.intro {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 100px 25px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    inset: 15px -15px -15px 15px;
+    border: 2px solid #b88945;
+    z-index: 0;
+}
+
+.image-container img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.intro-text h2,
+.section-heading h2 {
+    margin: 12px 0 25px;
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.intro-text p {
+    margin-bottom: 18px;
+    color: #555;
+}
+
+.timeline-section {
+    padding: 100px 25px;
+    background: #151b25;
+    color: white;
+}
+
+.section-heading {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: white;
+}
+
+.timeline {
+    max-width: 850px;
+    margin: auto;
+    border-left: 2px solid #b88945;
+    padding-left: 35px;
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #b88945;
+    left: -43px;
+    top: 8px;
+}
+
+.year {
+    color: #d2a866;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.timeline-item h3 {
+    margin-bottom: 8px;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+}
+
+.timeline-item p {
+    color: #aeb4be;
+}
+
+.quote-section {
+    padding: 100px 25px;
+    background: #e8e0d0;
+}
+
+.quote-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.quote-mark {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 90px;
+    line-height: 0.6;
+    color: #b88945;
+}
+
+blockquote {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(25px, 4vw, 40px);
+    line-height: 1.35;
+    margin: 30px 0;
+}
+
+.quote-box p {
+    color: #666;
+    font-weight: 600;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #0c1017;
+    color: #8e96a3;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 70px 20px;
+    }
+
+    .image-container {
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .intro-text h2,
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .timeline {
+        padding-left: 25px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .timeline-item::before {
+        left: -33px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        min-height: 55vh;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .intro {
+        padding: 60px 18px;
+    }
+
+    .timeline-section,
+    .quote-section {
+        padding: 70px 18px;
+    }
+}
