@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Raja Jadham</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header>
+            <p class="eyebrow">RAJA JADHAM</p>
+            <h1>TaskFlow</h1>
+            <p class="subtitle">Organize your day. Finish what matters.</p>
+        </header>
+
+        <section class="input-card">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                maxlength="100"
+            >
+            <button id="addTask">Add Task</button>
+        </section>
+
+        <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="pending">Pending</button>
+            <button class="filter" data-filter="completed">Completed</button>
+        </div>
+
+        <section class="tasks-section">
+            <div class="section-title">
+                <h2>My Tasks</h2>
+                <span id="taskCount">0 tasks</span>
+            </div>
+
+            <div id="taskList"></div>
+
+            <div id="emptyState" class="empty-state">
+                <div>✓</div>
+                <h3>No tasks yet</h3>
+                <p>Add your first task to get started.</p>
+            </div>
+        </section>
+
+        <footer>
+            Oasis Infobyte • Level 2 Task 3
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
