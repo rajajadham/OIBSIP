@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RajaAuth | Login System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="auth-wrapper">
+
+        <section class="brand-panel">
+            <p class="eyebrow">RAJA JADHAM</p>
+            <h1>Secure access.<br>Simple experience.</h1>
+            <p>
+                A client-side authentication system created for
+                the Oasis Infobyte Web Development Internship.
+            </p>
+        </section>
+
+        <section class="auth-panel">
+
+            <div id="loginView" class="auth-view">
+                <span class="icon">↗</span>
+                <h2>Welcome back</h2>
+                <p class="form-subtitle">Login to your account</p>
+
+                <form id="loginForm">
+
+                    <label for="loginEmail">Email</label>
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                    <label for="loginPassword">Password</label>
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter password"
+                        required
+                    >
+
+                    <p id="loginError" class="error"></p>
+
+                    <button type="submit" class="primary-btn">
+                        Login
+                    </button>
+                </form>
+
+                <p class="switch-text">
+                    Don't have an account?
+                    <button id="showRegister" class="link-btn">
+                        Register
+                    </button>
+                </p>
+            </div>
+
+            <div id="registerView" class="auth-view hidden">
+                <span class="icon">+</span>
+                <h2>Create account</h2>
+                <p class="form-subtitle">Register a new account</p>
+
+                <form id="registerForm">
+
+                    <label for="registerName">Full Name</label>
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Your name"
+                        required
+                    >
+
+                    <label for="registerEmail">Email</label>
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                    <label for="registerPassword">Password</label>
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Minimum 8 characters"
+                        required
+                    >
+
+                    <p class="password-rule">
+                        Use 8+ characters with uppercase, lowercase
+                        and a number.
+                    </p>
+
+                    <p id="registerError" class="error"></p>
+
+                    <button type="submit" class="primary-btn">
+                        Create Account
+                    </button>
+                </form>
+
+                <p class="switch-text">
+                    Already have an account?
+                    <button id="showLogin" class="link-btn">
+                        Login
+                    </button>
+                </p>
+            </div>
+
+            <div id="dashboardView" class="auth-view hidden">
+                <span class="icon">✓</span>
+                <h2>Dashboard</h2>
+                <p class="form-subtitle">You are successfully logged in.</p>
+
+                <div class="user-card">
+                    <span>Logged in as</span>
+                    <strong id="dashboardName"></strong>
+                    <small id="dashboardEmail"></small>
+                </div>
+
+                <button id="logoutButton" class="primary-btn">
+                    Logout
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
